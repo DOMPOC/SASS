@@ -1,0 +1,49 @@
+@import 'var';
+@import 'components';
+@import 'mixin';
+.container{
+	width:80%;
+	margin: 0 auto;
+	@include round-block(50px);
+	background-color: $containerBG;
+	nav{
+		background-color: $navBG; /*power shell*/
+		li{
+			display: inline-block;
+			@extend .button;
+			a{
+				color: $naviBG;
+				text-decoration: none;
+				&:hover{
+					color: $hoverBG;
+				}
+			}
+		}
+	}
+}
+.container2{
+	width: 80%;
+	margin: auto;
+	background-color: $containerBG;
+	h1{
+		text-align: center;
+	}
+	p{
+		text-align: center;
+	}
+}	
+.photo{
+		width: 80%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+		@include round-block(60px);
+		img{
+			@extend img;
+			margin-top: 10px;
+			padding: 85px;
+		}	
+
+	}
+
